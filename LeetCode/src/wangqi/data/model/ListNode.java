@@ -1,8 +1,8 @@
 package wangqi.data.model;
 
 public class ListNode {
-	public int value;
-	public ListNode next;
+	private int value;
+	private ListNode next;
 
 	public ListNode(int value) {
 		this.value = value;
