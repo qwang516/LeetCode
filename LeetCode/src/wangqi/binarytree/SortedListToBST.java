@@ -13,7 +13,7 @@ public class SortedListToBST {
 		ListNode cur = head;
 		int len = 0;
 		while (cur != null) {
-			cur = cur.next;
+			cur = cur.getNext();
 			len++;
 		}
 		ArrayList<ListNode> list = new ArrayList<ListNode>();
@@ -27,9 +27,9 @@ public class SortedListToBST {
 			return null;
 		}
 		int m = (left + right) / 2;
-		TreeNode node = new TreeNode(list.get(0).value);
+		TreeNode node = new TreeNode(list.get(0).getValue());
 		node.setLeft(helper(list, left, m - 1));
-		list.set(0, list.get(0).next);
+		list.set(0, list.get(0).getNext());
 		node.setRight(helper(list, m + 1, right));
 		return node;
 	}
