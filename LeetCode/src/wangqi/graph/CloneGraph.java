@@ -55,6 +55,6 @@ public class CloneGraph {
 				map.get(curNode).getNeighbours().add(neighbour);
 			}
 		}
-		return null;
+		return map.get(node);
 	}
 }
